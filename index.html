@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>Almased</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header class="main-header">
     <div class="container">
+      <button class="hamburger"><i class="fas fa-bars"></i></button>
+
       <img src="photos/img1.png" alt="Almased Logo" class="logo">
+
       <nav class="nav-links">
         <a href="#">SHOP</a>
         <a href="#">About Almased</a>
@@ -22,6 +24,7 @@
         <a href="#">How to Use</a>
         <a href="#">Learn</a>
       </nav>
+
       <div class="icons">
         <i class="fas fa-search"></i>
         <i class="fas fa-user"></i>
@@ -29,5 +32,13 @@
       </div>
     </div>
   </header>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
