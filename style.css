@@ -38,7 +38,7 @@ body {
   text-decoration: none;
   color: #000;
   font-size: 16px;
-  padding: 10px 20px;
+  padding: 20px;
   border-radius: 25px;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -71,7 +71,6 @@ body {
   display: none;
 }
 
-/* Responsive for tablets and phones */
 @media (max-width: 1024px) {
   .hamburger {
     display: block;
