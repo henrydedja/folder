@@ -53,6 +53,15 @@
       <span class="bar"></span>
     </div>
   </div>
+
+  <div class="tabs">
+  <div class="tab active"><span class="plus">+</span><br> Nutrition Meal</div>
+  <div class="tab active"><span class="plus">+</span><br> Weight Loss</div>
+  <div class="tab active"><span class="plus">+</span><br> Muscle Preservation</div>
+  <div class="tab active"><span class="plus">+</span><br> Muscle Gain</div>
+  <div class="tab active"><span class="plus">+</span><br> All Health Goals</div>
+</div>
+
 </section>
 
   <script>
@@ -61,6 +70,15 @@
     hamburger.addEventListener('click', () => {
       nav.classList.toggle('open');
     });
+    
+  const tabs = document.querySelectorAll('.tab');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+    });
+  });
+
   </script>
 </body>
 </html>

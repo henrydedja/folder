@@ -271,3 +271,39 @@ body {
     height: 3px;
   }
 }
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  margin: 20px 0;
+}
+
+.tab {
+  border: 1px solid #ccc;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  width: 180px;
+  height: 40px;
+  background-color: white;
+  color: #4CAF50;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.tab:hover {
+  background-color: #55AB25;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.tab .plus {
+  font-size: 22px;
+ 
+  color: rgb(104, 100, 100); 
+  font-weight: 100;
+}
+
+
