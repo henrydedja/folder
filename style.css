@@ -305,5 +305,128 @@ body {
   color: rgb(104, 100, 100); 
   font-weight: 100;
 }
+.welcome-part {
+  background-color: #f3ede7;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 60px;
+  margin: 40px auto;
+  max-width: 1200px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
 
+.welcome-text {
+  flex: 1;
+  max-width: 480px;
+}
+
+.welcome-text h2 {
+  font-size: 36px;
+  color: #388e3c;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.welcome-text p {
+  font-size: 16px;
+  color: #4e734e;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.shop-button {
+  background-color: #55AB25;
+  color: white;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.shop-button:hover {
+  background-color: #3b8a1c;
+}
+
+.welcome-pack {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f3eae5;
+  padding: 60px 100px;
+  border-radius: 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.welcome-text {
+  max-width: 50%;
+}
+
+.welcome-text h2 {
+  color: #368c38;
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.welcome-text p {
+  font-size: 18px;
+  color: #4b4b4b;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.shop-button {
+  display: inline-block;
+  background-color: #368c38;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.shop-button:hover {
+  background-color: #2c742e;
+}
+
+.welcome-images {
+  position: relative;
+  width: 50%;
+  height: 460px;
+}
+
+.shaker {
+  position: absolute;
+  width: 140px;
+  height: auto;
+  left: 90px;
+  top: 0;
+  z-index: 2;
+}
+
+.can1 {
+  position: absolute;
+  width: 140px;
+  height: auto;
+  left: 180px;
+  top: 40px;
+  z-index: 1;
+}
+
+.can2 {
+  position: absolute;
+  width: 140px;
+  height: auto;
+  left: 260px;
+  top: 20px;
+  z-index: 0;
+}
 
