@@ -356,7 +356,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f3eae5;
+  background-color: #F1E8E6;
   padding: 60px 100px;
   border-radius: 20px;
   margin: 40px auto;
@@ -368,29 +368,33 @@ body {
 }
 
 .welcome-text h2 {
-  color: #368c38;
-  font-size: 36px;
-  font-weight: 500;
+  font-family: 'Helvetica Neue LT Std';
+  color: #238014;
+  font-size: 60px;
+  font-weight: 300;
   margin-bottom: 20px;
-  line-height: 1.2;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .welcome-text p {
-  font-size: 18px;
-  color: #4b4b4b;
+  font-size: 20px;
+  font-weight: 400;
+  color: #55AB26;
   margin-bottom: 30px;
-  line-height: 1.5;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .shop-button {
   display: inline-block;
-  background-color: #368c38;
+  background-color: #55AB26;
   color: white;
   padding: 14px 28px;
   font-size: 16px;
-  border-radius: 30px;
+  border-radius: 50px;
   text-decoration: none;
-  transition: background 0.3s ease;
+  transition:  0.3s ease;
 }
 
 .shop-button:hover {
@@ -399,9 +403,19 @@ body {
 
 .welcome-images {
   position: relative;
-  width: 50%;
-  height: 460px;
+  width: 100%;
+  height: 460px; 
+  overflow: visible; 
 }
+
+.image-group {
+  position: absolute;
+  top: -400px;     /* move up into position */
+  left: 540px;    /* move right into the red box */
+  transform: scale(1.6); 
+  transform-origin: top left;
+}
+
 
 .shaker {
   position: absolute;
@@ -409,7 +423,7 @@ body {
   height: auto;
   left: 90px;
   top: 0;
-  z-index: 2;
+  z-index: 3;
 }
 
 .can1 {
@@ -418,7 +432,7 @@ body {
   height: auto;
   left: 180px;
   top: 40px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .can2 {
@@ -427,6 +441,8 @@ body {
   height: auto;
   left: 260px;
   top: 20px;
-  z-index: 0;
+  z-index: 1;
 }
+
+
 
