@@ -69,10 +69,11 @@ body {
   color: #55AB25;
   cursor: pointer;
   display: none;
+  transition: opacity 0.3s ease;
 }
 
 
-/*  Responsive: Tablet Nav Bar */
+/*  Responsive nav links */
 
 @media (max-width: 1024px) {
   .hamburger {
@@ -104,6 +105,7 @@ body {
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
     border-right: 1px solid #eee;
+    overflow-y: auto;
   }
 
   .nav-links.open {
@@ -226,7 +228,7 @@ body {
   background-color: white;
 }
 
-/*  Responsive: Mobile Hero Banner */
+/*  Responsive hero banner */
 
 @media (max-width: 768px) {
   .heroBanner-aligner {

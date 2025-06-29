@@ -106,12 +106,13 @@
 </section>
 
   <script>
-    const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('.nav-links');
-    hamburger.addEventListener('click', () => {
-      nav.classList.toggle('open');
-    });
-    
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
+
   const tabs = document.querySelectorAll('.tab');
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -120,6 +121,24 @@
     });
   });
 
-  </script>
+  // hides hamburger
+  let lastScrollTop = 0;
+
+  nav.addEventListener('scroll', () => {
+    const currentScroll = nav.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+      // scrolling down
+      hamburger.style.opacity = "0";
+      hamburger.style.pointerEvents = "none";
+    } else {
+      // scrolling up
+      hamburger.style.opacity = "1";
+      hamburger.style.pointerEvents = "auto";
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+  });
+</script>
 </body>
 </html>
