@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Jost', sans-serif;
+  font-family: 'Jost';
 }
 
 .main-header {
@@ -121,15 +121,26 @@ body {
 }
 
 .heroBanner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("photos/img2.jpg"); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  width: auto;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  transition: background-image 0.6s ease;
+}
+
+.hero-slide-1 {
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("photos/img2.jpg");
+}
+
+.hero-slide-2 {
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("photos/img3.png");
+}
+
+.hero-slide-3 {
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("photos/img4.jpg");
+}
+
+.hero-slide-4 {
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("photos/img5.jpg");
 }
 
 .heroBanner-aligner {
@@ -418,7 +429,6 @@ body {
   top: -400px;     
   left: 540px;    
   transform: scale(1.6); 
-  transform-origin: top left;
 }
 
 
@@ -483,3 +493,99 @@ body {
   color: #55AB26;
   line-height: 1.5;
 }
+
+.testimonial-frame {
+  background-color: #e4f5da;
+  padding: 40px 0;
+}
+
+.testimonial-box {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.testimonial-quote {
+  flex: 1;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: #e4f5da;
+}
+
+.testimonial-quote .quote {
+  font-family: 'Playfair Display';
+  font-size: 55px;
+  font-weight: 300;
+  color: #238014;
+  margin-bottom: 20px;
+  line-height: 100%;
+}
+
+.testimonial-quote .author {
+  font-family: 'Jost';
+  color: #409E31;
+  font-weight: 400;
+  font-size: 22px;
+  margin-bottom: 20px;
+  line-height: 100%;
+}
+
+.story-btn {
+  font-family: 'Playfair Display';
+  display: inline-block;
+  background-color: #55AB25;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.story-btn:hover {
+  background-color: #3b8a1c;
+}
+
+.testimonial-arrows {
+  margin-top: 30px;
+  font-size: 24px;
+  color: #55AB25;
+  display: flex;
+  gap: 20px;
+}
+
+.testimonial-image {
+  flex: 1;
+  min-width: 300px;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.testimonial-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonial-box {
+    flex-direction: column;
+  }
+
+  .testimonial-image {
+    height: auto;
+  }
+
+  .testimonial-quote {
+    text-align: center;
+  }
+
+  .testimonial-arrows {
+    justify-content: center;
+  }
+}
+

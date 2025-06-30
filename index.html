@@ -32,7 +32,7 @@
       </div>
     </div>
   </header>
-<div class="heroBanner">
+<div class="heroBanner hero-slide-1">
     <div class="heroBanner-aligner">
       <div class="heroBanner-title">
         <h1>Natural<br>Superfood<br>Protein</h1>
@@ -46,12 +46,13 @@
         <div class="circle"><strong>22</strong><br><span>vitamins &<br>minerals</span></div>
       </div>
     </div>
-    <div class="bars">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
+   <div class="bars">
+    <span class="bar active" data-slide="1"></span>
+    <span class="bar active" data-slide="2"></span>
+    <span class="bar active" data-slide="3"></span>
+    <span class="bar active" data-slide="4"></span>
+</div>
+
   </div>
 
   <div class="tabs">
@@ -103,16 +104,38 @@
     <p>Boost energy, mental and<br>physical performance for<br>Busy lifestyles</p>
   </div>
 </section>
+
+<section class="testimonial-frame">
+  <div class="testimonial-box">
+    <div class="testimonial-quote">
+      <p class="quote">“The energy I started to have was unbelievable.”</p>
+      <p class="author">— Stephanie S.</p>
+      <a href="#" class="story-btn">LEARN STEPHANIE'S STORY</a>
+      <div class="testimonial-arrows">
+        <span class="arrow">&#8592;</span>
+        <span class="arrow">&#8594;</span>
+      </div>
+    </div>
+    <div class="testimonial-image">
+      <img src="photos/author1.png" alt="Testimonial Image">
+    </div>
+  </div>
 </section>
+
+
+</section>
+
 
   <script>
   const hamburger = document.querySelector('.hamburger');
   const nav = document.querySelector('.nav-links');
 
+  // Toggle mobile menu
   hamburger.addEventListener('click', () => {
     nav.classList.toggle('open');
   });
 
+  // Tabs interaction
   const tabs = document.querySelectorAll('.tab');
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -121,24 +144,44 @@
     });
   });
 
-  // hides hamburger
+  // Hide/show hamburger icon on scrolling inside nav (mobile)
   let lastScrollTop = 0;
-
   nav.addEventListener('scroll', () => {
     const currentScroll = nav.scrollTop;
-
     if (currentScroll > lastScrollTop) {
-      // scrolling down
       hamburger.style.opacity = "0";
       hamburger.style.pointerEvents = "none";
     } else {
-      // scrolling up
       hamburger.style.opacity = "1";
       hamburger.style.pointerEvents = "auto";
     }
-
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   });
+
+  // Hero Banner Carousel via class switching
+  const heroBanner = document.querySelector('.heroBanner');
+  const bars = document.querySelectorAll('.bar');
+
+  bars.forEach(bar => {
+    bar.addEventListener('click', () => {
+      // Deactivate all bars
+      bars.forEach(b => b.classList.remove('active'));
+      // Activate clicked bar
+      bar.classList.add('active');
+
+      // Switch hero banner background class
+      const slideNumber = bar.dataset.slide;
+      heroBanner.className = `heroBanner hero-slide-${slideNumber}`;
+    });
+  });
+
+  // Auto-rotate hero banner every 5 seconds
+  let current = 0;
+  setInterval(() => {
+    current = (current + 1) % bars.length;
+    bars[current].click(); // simulate click
+  }, 5000);
 </script>
+
 </body>
 </html>
