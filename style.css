@@ -376,6 +376,7 @@ body {
   max-width: 800px;
   height: 500px;
   overflow: hidden;
+  gap: 20px;
 }
 
 .welcome-text {
@@ -410,7 +411,7 @@ body {
   font-size: 16px;
   border-radius: 50px;
   text-decoration: none;
-  transition:  0.3s ease;
+  transition: 0.3s ease;
 }
 
 .shop-button:hover {
@@ -420,17 +421,16 @@ body {
 .welcome-images {
   position: relative;
   width: 100%;
-  height: 100px; 
-  overflow: visible; 
+  height: 100px;
+  overflow: visible;
 }
 
 .image-group {
   position: absolute;
-  top: -400px;     
-  left: 540px;    
-  transform: scale(1.6); 
+  top: -400px;
+  left: 540px;
+  transform: scale(1.6);
 }
-
 
 .shaker {
   position: absolute;
@@ -458,6 +458,59 @@ body {
   top: 20px;
   z-index: 1;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .welcome-pack {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+  }
+
+  .welcome-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .welcome-text h2 {
+    font-size: 36px;
+  }
+
+  .welcome-text p {
+    font-size: 16px;
+  }
+
+  .shop-button {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+
+  .image-group {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: scale(1);
+    margin-top: 30px;
+  }
+
+  .shaker,
+  .can1,
+  .can2 {
+    position: static;
+    width: 90px;
+    margin: 0 5px;
+  }
+
+  .welcome-images {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+
 
 .stickers-group {
   display: flex;
@@ -493,6 +546,35 @@ body {
   color: #55AB26;
   line-height: 1.5;
 }
+
+@media (max-width: 768px) {
+  .stickers-group {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .sticker {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .sticker img {
+    width: 40px;
+    margin-bottom: 16px;
+  }
+
+  .sticker h4 {
+    font-size: 15px;
+  }
+
+  .sticker p {
+    font-size: 12px;
+  }
+}
+
+
 .testimonial-frame {
   background-color: #e4f5da;
   padding: 0;
@@ -583,6 +665,7 @@ body {
   width: 50%;
   height: 100%;
   overflow: hidden;
+  display: flex;
 }
 
 .testimonial-image img {
@@ -595,13 +678,14 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .testimonial-box {
+  .testimonial-frame {
+    height: auto;
     flex-direction: column;
   }
 
-  .testimonial-image {
+  .testimonial-box {
+    flex-direction: column;
     height: auto;
-    width: 100%;
   }
 
   .testimonial-quote {
@@ -610,7 +694,160 @@ body {
     align-items: center;
   }
 
+  .testimonial-quote .quote {
+    font-size: 32px;
+  }
+
+  .testimonial-quote .author {
+    font-size: 18px;
+  }
+
+  .story-btn {
+    font-size: 16px;
+    padding: 14px 28px;
+  }
+
   .testimonial-arrows {
     justify-content: center;
   }
+
+  .testimonial-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .testimonial-image img {
+    height: auto;
+    object-position: center;
+  }
 }
+
+
+.health-benefits {
+  background-color: #f1e8e6;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.health-title {
+  font-family: 'Jost';
+  font-weight: 300;
+  line-height: 100%;
+  font-size: 60px;
+  color: #238014;
+  margin-top: 10px;
+}
+
+.benefits-slider-container {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 60px;
+}
+
+.benefits-slider {
+  display: flex;
+  transition: transform 0.3s ease;
+  gap: 20px;
+  scroll-behavior: smooth;
+}
+
+.benefit-card {
+  width: 400px;
+  height: 500px;
+  flex: 0 0 auto;
+  background: #55AB25;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.benefit-img {
+  position: relative;
+}
+
+.benefit-img img {
+  width: 100%;
+  height: auto;
+}
+
+.plus-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #55AB25;
+  color: white;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefit-text {
+  font-family: 'Playfair Display';
+  padding: 20px;
+  text-align: left;
+}
+
+.benefit-text h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.benefit-text p {
+  font-size: 14px;
+  color: white;
+  line-height: 1.4;
+}
+
+.benefit-nav {
+  position: absolute;
+  right: 30px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.arrow-outline, .arrow-filled {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #55AB26;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.arrow-outline img,
+.arrow-filled img {
+  width: 16px;
+  height: 16px;
+}
+
+.benefit-bars {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.bar {
+  width: 180px;
+  height: 3px;
+  background-color: #bdbdbd;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.bar.active {
+  background-color: white;
+}
+

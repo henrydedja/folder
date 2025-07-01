@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
 </head>
 <body>
   <header class="main-header">
@@ -125,12 +126,84 @@
     </div>
   </div>
 </section>
+<section class="health-benefits">
+  <h2 class="health-title">Discover our daily health benefits</h2>
 
+  <div class="benefits-slider-container">
+    <div class="benefits-slider" id="benefits-slider">
+      <!-- Card 1 -->
+      <div class="benefit-card">
+        <div class="benefit-img">
+          <img src="photos/benefit1.png" alt="Weight Loss">
+          <div class="plus-icon">+</div>
+        </div>
+        <div class="benefit-text green">
+          <h3>Weight Loss</h3>
+          <p>Scientifically proven natural weight loss. Detoxes your liver from fat so your whole metabolism works better.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="benefit-card">
+        <div class="benefit-img">
+          <img src="photos/benefit1.png" alt="GLP-1 Support">
+          <div class="plus-icon">+</div>
+        </div>
+        <div class="benefit-text green">
+          <h3>GLP-1 Support</h3>
+          <p>Scientifically proven to retain 100% muscle mass while losing weight.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="benefit-card">
+        <div class="benefit-img">
+          <img src="photos/benefit1.png" alt="Anti-aging">
+          <div class="plus-icon">+</div>
+        </div>
+        <div class="benefit-text green">
+          <h3>Anti-aging (Skin, hair)</h3>
+          <p>Use Almased for life to reduce biological age. Feel and look younger with glowing skin and healthy hair.</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="benefit-card">
+        <div class="benefit-img">
+          <img src="photos/benefit1.png" alt="Sports Performance">
+          <div class="plus-icon">+</div>
+        </div>
+        <div class="benefit-text green">
+          <h3>Sports Performance</h3>
+          <p>Improves recovery and energy for athletic performance.</p>
+        </div>
+      </div>
+    </div>
+
+        <div class="benefit-bars">
+          <span class="bar active"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+
+    <!-- Navigation Arrows -->
+    <div class="benefit-nav">
+      <button class="arrow-outline" onclick="scrollSlider(-1)">
+        <img src="photos/left-arrow.png" alt="Left">
+      </button>
+      <button class="arrow-filled" onclick="scrollSlider(1)">
+        <img src="photos/right-arrow.png" alt="Right">
+      </button>
+    </div>
+  </div>
+</section>
 
 </section>
 
 
-  <script>
+  <script> 
   const hamburger = document.querySelector('.hamburger');
   const nav = document.querySelector('.nav-links');
 
@@ -185,7 +258,24 @@
     current = (current + 1) % bars.length;
     bars[current].click(); // simulate click
   }, 5000);
+  
+let currentIndex = 0;
+  const slider = document.getElementById('benefits-slider');
+  const benefitbars = document.querySelectorAll('.bar');
+  const cardWidth = 320;
+
+  function scrollSlider(direction) {
+    const maxIndex = bars.length - 1;
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = 0;
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+    slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    bars.forEach(bar => bar.classList.remove('active'));
+    bars[currentIndex].classList.add('active');
+  }
+
 </script>
+
 
 </body>
 </html>
