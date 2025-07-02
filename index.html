@@ -126,6 +126,8 @@
     </div>
   </div>
 </section>
+
+
 <section class="health-benefits">
   <h2 class="health-title">Discover our daily health benefits</h2>
 
@@ -146,7 +148,7 @@
       <!-- Card 2 -->
       <div class="benefit-card">
         <div class="benefit-img">
-          <img src="photos/benefit1.png" alt="GLP-1 Support">
+          <img src="photos/benefit2.png" alt="GLP-1 Support">
           <div class="plus-icon">+</div>
         </div>
         <div class="benefit-text green">
@@ -158,7 +160,7 @@
       <!-- Card 3 -->
       <div class="benefit-card">
         <div class="benefit-img">
-          <img src="photos/benefit1.png" alt="Anti-aging">
+          <img src="photos/benefit3.png" alt="Anti-aging">
           <div class="plus-icon">+</div>
         </div>
         <div class="benefit-text green">
@@ -170,7 +172,7 @@
       <!-- Card 4 -->
       <div class="benefit-card">
         <div class="benefit-img">
-          <img src="photos/benefit1.png" alt="Sports Performance">
+          <img src="photos/benefit4.png" alt="Sports Performance">
           <div class="plus-icon">+</div>
         </div>
         <div class="benefit-text green">
@@ -182,23 +184,47 @@
 
         <div class="benefit-bars">
           <span class="bar active"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+          <span class="bar active"></span>
+          <span class="bar active"></span>
+          <span class="bar active"></span>
         </div>
 
-
-    <!-- Navigation Arrows -->
-    <div class="benefit-nav">
-      <button class="arrow-outline" onclick="scrollSlider(-1)">
-        <img src="photos/left-arrow.png" alt="Left">
-      </button>
-      <button class="arrow-filled" onclick="scrollSlider(1)">
-        <img src="photos/right-arrow.png" alt="Right">
-      </button>
-    </div>
+  <div class="benefit-nav">
+  <button class="arrow-outline" onclick="scrollSlider(-1)"> &#x27F5; </button>
+  <button class="arrow-outline" onclick="scrollSlider(1)"> &#x27F6; </button>
+</div>
   </div>
 </section>
+
+<section class="metabolic-health">
+  <h2 class="metabolic-title">The Global Leader in Metabolic Health</h2>
+  
+  <div class="metrics">
+    <div class="metric">
+      <h3>100%</h3>
+      <p>muscle mass<br>preservation</p>
+    </div>
+    <div class="metric">
+      <h3>113%</h3>
+      <p>more weight loss<br>than a low-fat diet</p>
+    </div>
+    <div class="metric">
+      <h3>86%</h3>
+      <p>more fat loss</p>
+    </div>
+    <div class="metric">
+      <h3>258%</h3>
+      <p>more waist<br>reduction</p>
+    </div>
+  </div>
+
+  <p class="metabolic-description">
+    No other protein compares to Almased. From balanced blood sugar to a better metabolism, Almased has been shown in peer-reviewed studies to have numerous health benefits.
+  </p>
+
+  <a href="#" class="research-btn">See our research studies →</a>
+</section>
+
 
 </section>
 
@@ -207,12 +233,10 @@
   const hamburger = document.querySelector('.hamburger');
   const nav = document.querySelector('.nav-links');
 
-  // Toggle mobile menu
   hamburger.addEventListener('click', () => {
     nav.classList.toggle('open');
   });
 
-  // Tabs interaction
   const tabs = document.querySelectorAll('.tab');
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -235,18 +259,15 @@
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   });
 
-  // Hero Banner Carousel via class switching
   const heroBanner = document.querySelector('.heroBanner');
   const bars = document.querySelectorAll('.bar');
 
   bars.forEach(bar => {
     bar.addEventListener('click', () => {
-      // Deactivate all bars
       bars.forEach(b => b.classList.remove('active'));
-      // Activate clicked bar
       bar.classList.add('active');
 
-      // Switch hero banner background class
+      
       const slideNumber = bar.dataset.slide;
       heroBanner.className = `heroBanner hero-slide-${slideNumber}`;
     });
@@ -256,23 +277,79 @@
   let current = 0;
   setInterval(() => {
     current = (current + 1) % bars.length;
-    bars[current].click(); // simulate click
+    bars[current].click();
   }, 5000);
-  
-let currentIndex = 0;
-  const slider = document.getElementById('benefits-slider');
-  const benefitbars = document.querySelectorAll('.bar');
-  const cardWidth = 320;
 
-  function scrollSlider(direction) {
-    const maxIndex = bars.length - 1;
+  // Testimonial Carousel
+  const testimonialQuote = document.querySelector('.testimonial-quote .quote');
+  const testimonialAuthor = document.querySelector('.testimonial-quote .author');
+  const testimonialImage = document.querySelector('.testimonial-image img');
+
+  const testimonials = [
+    {
+      quote: "The energy I started to have was unbelievable.",
+      author: "— Stephanie S.",
+      image: "photos/author1.png"
+    },
+    {
+      quote: "Almased changed my life completely!",
+      author: "— Michael B.",
+      image: "photos/author2.png"
+    }
+  ];
+
+  let testimonialIndex = 0;
+
+  function updateTestimonial(index) {
+    testimonialQuote.textContent = `“${testimonials[index].quote}”`;
+    testimonialAuthor.textContent = testimonials[index].author;
+    testimonialImage.src = testimonials[index].image;
+  }
+
+  document.querySelector('.testimonial-arrows .arrow-btn:first-child').addEventListener('click', () => {
+    testimonialIndex = (testimonialIndex - 1 + testimonials.length) % testimonials.length;
+    updateTestimonial(testimonialIndex);
+  });
+
+  document.querySelector('.testimonial-arrows .arrow-btn:last-child').addEventListener('click', () => {
+    testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+    updateTestimonial(testimonialIndex);
+  });
+
+  updateTestimonial(testimonialIndex);
+
+  // Benefit bars (clickable carousel)
+  const benefitbars = document.querySelectorAll('.benefit-bars .bar');
+  const slider = document.getElementById('benefits-slider');
+  const cardWidth = 400;
+  let currentIndex = 0;
+
+  function scrollSlider(index) {
+    slider.style.transform = `translateX(-${index * cardWidth}px)`;
+    benefitbars.forEach(bar => bar.classList.remove('active'));
+    benefitbars[index].classList.add('active');
+  }
+
+  // Arrow buttons for benefit cards
+  function slideBy(direction) {
     currentIndex += direction;
     if (currentIndex < 0) currentIndex = 0;
-    if (currentIndex > maxIndex) currentIndex = maxIndex;
-    slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-    bars.forEach(bar => bar.classList.remove('active'));
-    bars[currentIndex].classList.add('active');
+    if (currentIndex >= benefitbars.length) currentIndex = benefitbars.length - 1;
+    scrollSlider(currentIndex);
   }
+
+  benefitbars.forEach((bar, index) => {
+    bar.addEventListener('click', () => {
+      currentIndex = index;
+      scrollSlider(currentIndex);
+    });
+  });
+
+  document.querySelector('.arrow-outline').addEventListener('click', () => slideBy(-1));
+  document.querySelector('.arrow-filled').addEventListener('click', () => slideBy(1));
+
+  scrollSlider(0);
+
 
 </script>
 

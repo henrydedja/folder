@@ -759,15 +759,20 @@ body {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
 }
 
 .benefit-img {
   position: relative;
+  height: 700px; 
+  overflow: hidden;
 }
 
 .benefit-img img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 .plus-icon {
@@ -785,23 +790,29 @@ body {
   align-items: center;
 }
 
+
 .benefit-text {
-  font-family: 'Playfair Display';
   padding: 20px;
-  text-align: left;
+  height: 150px; 
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 6px;
 }
 
 .benefit-text h3 {
   font-size: 18px;
   font-weight: bold;
   color: white;
-  margin-bottom: 10px;
+  margin: 0;
 }
 
 .benefit-text p {
   font-size: 14px;
   color: white;
   line-height: 1.4;
+  margin: 0;
 }
 
 .benefit-nav {
@@ -813,24 +824,27 @@ body {
   gap: 10px;
 }
 
-.arrow-outline, .arrow-filled {
-  width: 40px;
-  height: 40px;
+.arrow-outline {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   border: 2px solid #55AB26;
   background-color: transparent;
+  color: #55AB26;
+  font-size: 20px;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.arrow-outline:hover {
+  background-color: #238014;
+  color: white;
 }
 
 
-.arrow-outline img,
-.arrow-filled img {
-  width: 16px;
-  height: 16px;
-}
 
 .benefit-bars {
   display: flex;
@@ -849,5 +863,80 @@ body {
 
 .bar.active {
   background-color: white;
+}
+
+.metabolic-health {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: white;
+}
+
+.metabolic-title {
+  font-size: 50px;
+  color: #238014;
+  margin-bottom: 40px;
+  font-family: 'Jost';
+  font-weight: 300;
+}
+
+.metrics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.metric {
+  width: 220px;
+  height: 220px;
+  border: 1px solid #55AB26;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #55AB25;
+  font-family: 'Jost';    
+}
+
+.metric h3 {
+  font-size: 50px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.metric p {
+  font-size: 20px;
+  line-height: 1.4;
+  margin-top: 5px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.metabolic-description {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 16px;
+  color: #333;
+}
+
+.research-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #55AB25;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.research-btn:hover {
+  background-color: #238014;
 }
 
