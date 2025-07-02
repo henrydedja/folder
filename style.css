@@ -975,7 +975,6 @@ body {
   margin: 0 auto;
 }
 
-
 .quote-section {
   display: flex;
   justify-content: center;
@@ -1012,6 +1011,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 .quote-arrow.left {
@@ -1021,9 +1021,10 @@ body {
 .quote-arrow.right {
   right: 20px;
 }
+
 .quote-box {
   flex: 1;
-  padding: 40px 30px;
+  padding: 40px 30px 30px 30px;
   position: relative;
   text-align: left;
   display: flex;
@@ -1031,21 +1032,22 @@ body {
   justify-content: space-between;
 }
 
-
 .quote-text {
   font-family: 'Playfair Display';
   font-size: 30px;
   font-weight: 300;
   letter-spacing: 0%;
   color: #218300;
-  line-height: 100%;
-  margin-bottom: 50px;
+  line-height: 120%;
+  margin-bottom: auto;
+  min-height: 160px;
 }
 
 .quote-signature {
   height: 70px;
   width: 80px;
-  margin-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .quote-authors {
@@ -1053,6 +1055,8 @@ body {
   justify-content: space-between;
   font-size: 14px;
   color: #218300;
+  align-items: center;
+  padding-right: 50px; 
 }
 
 .quote-authors a {
@@ -1065,5 +1069,3 @@ body {
   font-weight: bold;
   color: #218300;
 }
-
-
