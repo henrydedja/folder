@@ -961,10 +961,10 @@ body {
 }
 
 .university-banner p {
-  font-size: 20px;
+  font-size: 24px;
   color: #218300;
-  font-weight: 500;
-  margin-bottom: 20px;
+  font-weight: 300;
+  margin-bottom: 10px;
 }
 
 .university-logos {
@@ -1021,13 +1021,16 @@ body {
 .quote-arrow.right {
   right: 20px;
 }
-
 .quote-box {
   flex: 1;
   padding: 40px 30px;
   position: relative;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
 
 .quote-text {
   font-family: 'Playfair Display';
@@ -1036,11 +1039,12 @@ body {
   letter-spacing: 0%;
   color: #218300;
   line-height: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .quote-signature {
-  height: 40px;
+  height: 70px;
+  width: 80px;
   margin-bottom: 15px;
 }
 
@@ -1052,7 +1056,13 @@ body {
 }
 
 .quote-authors a {
+  text-decoration: none;
+  color: #218300;
+}
+
+.active-author {
   text-decoration: underline;
+  font-weight: bold;
   color: #218300;
 }
 

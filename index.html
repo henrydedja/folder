@@ -229,30 +229,27 @@
     <p>Proven Results from 32 University backed Studies on Almased</p>
   <img src="photos/uni.png" alt="University Logos" class="university-logos">
   </div>
+ <div class="quote-section">
+  <div class="quote-image">
+    <img src="photos/doctor.png" alt="Doctor" id="quote-doctor">
+    <button class="quote-arrow left" onclick="changeQuote(-1)">&#x27F5;</button>
+  </div>
 
-  <div class="quote-section">
-    <div class="quote-image">
-      <img src="photos/doctor.png" alt="Doctor">
-      <button class="quote-arrow left">&#x27F5;</button>
+  <div class="quote-box">
+    <p class="quote-text" id="quote-text">
+      "If you are on GLP-1s, it's important to supplement with Almased so you maintain muscle while still both losing weight and losing fat."
+    </p>
+    <img src="photos/signature.png" alt="Signature" class="quote-signature" id="quote-signature">
+    <div class="quote-authors">
+      <a href="#" id="doctor-left" class="active-author">Dr Eric J Rosenbaum</a>
+      <span id="doctor-right">Dr Aloys Berg</span>
     </div>
-    <div class="quote-box">
-      <p class="quote-text">
-        "If you are on GLP-1s, it's important to supplement with Almased so you maintain muscle while still both losing weight and losing fat."
-      </p>
-      <img src="photos/signature.png" alt="Signature" class="quote-signature">
-      <div class="quote-authors">
-        <a href="#">Dr Eric J Rosenbaum</a>
-        <span>Dr Aloys Berg</span>
-      </div>
-      <button class="quote-arrow right">&#x27F6;</button>
-    </div>
+    <button class="quote-arrow right" onclick="changeQuote(1)">&#x27F6;</button>
+  </div>
   </div>
 </section>
 
-
-
 </section>
-
 
   <script> 
   const hamburger = document.querySelector('.hamburger');
@@ -370,10 +367,58 @@
     });
   });
 
-  document.querySelector('.arrow-outline').addEventListener('click', () => slideBy(-1));
-  document.querySelector('.arrow-filled').addEventListener('click', () => slideBy(1));
+document.querySelectorAll('.arrow-outline')[0].addEventListener('click', () => slideBy(-1));
+document.querySelectorAll('.arrow-outline')[1].addEventListener('click', () => slideBy(1));
+
 
   scrollSlider(0);
+
+
+let quoteIndex = 0;
+
+const quoteText = document.getElementById('quote-text');
+const doctorImg = document.getElementById('quote-doctor');
+const doctorLeft = document.getElementById('doctor-left');
+const doctorRight = document.getElementById('doctor-right');
+const signature = document.getElementById('quote-signature');
+
+const quotes = [
+  {
+    text: `"If you are on GLP-1s, it's important to supplement with Almased so you maintain muscle while still both losing weight and losing fat."`,
+    doctorImg: "photos/doctor.png",
+    signatureImg: "photos/signature.png",
+    left: "Dr Eric J Rosenbaum",
+    right: "Dr Aloys Berg"
+  },
+  {
+    text: `"If you are on GLP-1s, it's important to supplement with Almased so you maintain muscle while still both losing weight and losing fat."`,
+    doctorImg: "photos/doctor.png",
+    signatureImg: "photos/signature.png",
+    left: "Dr Aloys Berg",
+    right: "Dr Eric J Rosenbaum"
+  }
+];
+
+function changeQuote(direction) {
+  quoteIndex = (quoteIndex + direction + quotes.length) % quotes.length;
+  const quote = quotes[quoteIndex];
+
+  quoteText.textContent = quote.text;
+  doctorImg.src = quote.doctorImg;
+  signature.src = quote.signatureImg;
+  doctorLeft.textContent = quote.left;
+  doctorRight.textContent = quote.right;
+
+ if (quote.left.includes("Eric")) {
+  doctorLeft.classList.add("active-author");
+  doctorRight.classList.remove("active-author");
+} else {
+  doctorLeft.classList.remove("active-author");
+  doctorRight.classList.add("active-author");
+}
+}
+
+changeQuote(0);
 
 
 </script>
