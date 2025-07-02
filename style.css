@@ -939,4 +939,121 @@ body {
 .research-btn:hover {
   background-color: #238014;
 }
+.university-section {
+  margin-top: 60px;
+  font-family: 'Playfair Display';
+}
+
+.university-banner {
+  background-color: #EFF266;
+  text-align: center;
+  padding: 20px 10px;
+}
+.university-section {
+  margin-top: 60px;
+  font-family: 'Jost', sans-serif;
+}
+
+.university-banner {
+  background-color: #F9F175;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.university-banner p {
+  font-size: 20px;
+  color: #218300;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.university-logos {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.quote-section {
+  display: flex;
+  justify-content: center;
+  background-color: #f6f1ee;
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 900px;
+  overflow: hidden;
+  position: relative;
+}
+
+.quote-image {
+  position: relative;
+  flex: 1;
+}
+
+.quote-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quote-arrow {
+  position: absolute;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #218300;
+  border-radius: 50%;
+  background: transparent;
+  color: #218300;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-arrow.left {
+  left: 20px;
+}
+
+.quote-arrow.right {
+  right: 20px;
+}
+
+.quote-box {
+  flex: 1;
+  padding: 40px 30px;
+  position: relative;
+  text-align: left;
+}
+
+.quote-text {
+  font-family: 'Playfair Display';
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 0%;
+  color: #218300;
+  line-height: 100%;
+  margin-bottom: 100px;
+}
+
+.quote-signature {
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+.quote-authors {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #218300;
+}
+
+.quote-authors a {
+  text-decoration: underline;
+  color: #218300;
+}
+
 
