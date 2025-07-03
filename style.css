@@ -864,6 +864,71 @@ body {
 .bar.active {
   background-color: white;
 }
+/* Responsive */
+@media (max-width: 768px) {
+  .health-title {
+    font-size: 36px;
+  }
+
+  .benefits-slider-container {
+    padding-bottom: 30px;
+  }
+
+  .benefits-slider {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefit-card {
+    width: 90%;
+    height: auto;
+  }
+
+  .benefit-img {
+    height: auto;
+  }
+
+  .plus-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .benefit-text {
+    height: auto;
+    padding: 16px;
+  }
+
+  .benefit-text h3 {
+    font-size: 16px;
+  }
+
+  .benefit-text p {
+    font-size: 13px;
+  }
+
+  .benefit-bars {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .bar {
+    width: 100px;
+  }
+
+  .benefit-nav {
+    position: static;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .arrow-outline {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
 
 .metabolic-health {
   text-align: center;
@@ -939,6 +1004,7 @@ body {
 .research-btn:hover {
   background-color: #238014;
 }
+
 .university-section {
   margin-top: 60px;
   font-family: 'Playfair Display';
@@ -1065,6 +1131,71 @@ body {
   font-weight: bold;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  .university-banner p {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  .university-logos {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .quote-section {
+    flex-direction: column;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .quote-box {
+    padding: 20px;
+  }
+
+  .quote-text {
+    font-size: 20px;
+    min-height: auto;
+  }
+
+  .quote-signature {
+    width: 60px;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .quote-authors {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding-right: 0;
+  }
+
+  .quote-arrow {
+    bottom: 10px;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .quote-arrow.left {
+    left: 10px;
+  }
+
+  .quote-arrow.right {
+    right: 10px;
+  }
+
+  .quote-image {
+    height: 300px;
+  }
+
+  .quote-image img {
+    object-position: top;
+  }
+}
+
+
 .shake-recipes {
   background-color: #f9f4f2;
   padding: 60px 20px;
@@ -1084,6 +1215,24 @@ body {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+}
+
+.shake-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  color: white;
+  background-color: #55AB26;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-weight: bold;
+  line-height: 40px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .shake-card {
@@ -1130,6 +1279,9 @@ body {
 }
 
 .retailer-logos h3 {
+  font-family:'Playfair Display' ;
+  font-weight: 300;
+  font-size: 28px;
   color: #218300;
   font-size: 18px;
   margin-bottom: 30px;
@@ -1163,3 +1315,159 @@ body {
   height: 200px;
 }
 
+.store-locator-btn {
+  font-family: 'Jost';
+  font-weight: 300;
+  display: inline-block;
+  width: 150px;
+  height: auto;
+  padding: 12px 24px;
+  background-color: #55AB25;
+  color: white;
+  border-radius: 32px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.store-locator-btn:hover {
+  background-color: #218300;
+}
+/* Responsive */
+
+@media (max-width: 768px) {
+  .shake-title {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .shake-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .shake-card {
+    width: 90%;
+  }
+
+  .shake-button {
+    font-size: 32px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .retailer-logos h3 {
+    font-size: 16px;
+  }
+
+  .logos-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 30px;
+    max-width: 100%;
+  }
+
+  .logos-row img {
+    max-width: 100px;
+    max-height: 50px;
+  }
+
+  .awards-section img {
+    width: 100%;
+    height: auto;
+  }
+
+  .store-locator-btn {
+    width: 100%;
+    max-width: 200px;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+.newsletter-section {
+  background-color: #D5E7B9;
+  padding: 50px 20px;
+}
+
+.newsletter-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left; 
+}
+
+
+.newsletter-title {
+  color: #4D9B2F; 
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-family:'Playfair Display' ;
+}
+
+.newsletter-heading {
+  color: #228200; 
+  font-size: 26px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  font-family: 'Playfair Display';
+}
+
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 12px 20px;
+  border: 2px solid #4D9B2F;
+  border-radius: 999px;
+  font-size: 20px;
+  width: 300px;
+  font-family: 'Playfair Display';
+  color: #228200;
+  background-color: #D5E7B9;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+  color: #4D9B2F;
+}
+
+.newsletter-form button {
+  padding: 12px 24px;
+  background-color: #4D9B2F;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Playfair Display';
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #228200;
+}
+
+
+@media (max-width: 768px) {
+  .newsletter-heading {
+    font-size: 20px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter-form input[type="email"] {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+    max-width: 160px;
+    font-size: 14px;
+  }
+}
