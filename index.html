@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
 </head>
 <body>
   <header class="main-header">
@@ -133,7 +132,7 @@
 
   <div class="benefits-slider-container">
     <div class="benefits-slider" id="benefits-slider">
-      <!-- Card 1 -->
+
       <div class="benefit-card">
         <div class="benefit-img">
           <img src="photos/benefit1.png" alt="Weight Loss">
@@ -145,7 +144,6 @@
         </div>
       </div>
 
-      <!-- Card 2 -->
       <div class="benefit-card">
         <div class="benefit-img">
           <img src="photos/benefit2.png" alt="GLP-1 Support">
@@ -157,7 +155,6 @@
         </div>
       </div>
 
-      <!-- Card 3 -->
       <div class="benefit-card">
         <div class="benefit-img">
           <img src="photos/benefit3.png" alt="Anti-aging">
@@ -169,7 +166,6 @@
         </div>
       </div>
 
-      <!-- Card 4 -->
       <div class="benefit-card">
         <div class="benefit-img">
           <img src="photos/benefit4.png" alt="Sports Performance">
@@ -190,10 +186,10 @@
         </div>
 
   <div class="benefit-nav">
-  <button class="arrow-outline" onclick="scrollSlider(-1)"> &#x27F5; </button>
-  <button class="arrow-outline" onclick="scrollSlider(1)"> &#x27F6; </button>
-</div>
+      <button class="arrow-outline prev-arrow"> &#x27F5; </button>
+      <button class="arrow-outline next-arrow"> &#x27F6; </button>
   </div>
+    </div>
 </section>
 
 <section class="metabolic-health">
@@ -249,180 +245,44 @@
   </div>
 </section>
 
+<section class="shake-recipes">
+  <h2 class="shake-title">Taste the Difference: Three Delicious Weight Loss<br>Shake Recipes using Almased Protein Powder</h2>
+  <div class="shake-cards">
+    <div class="shake-card">
+      <img src="photos/shake1.png" alt="Mango Matcha Magic">
+      <div class="shake-overlay">+</div>
+      <p>Weight Loss Shake Recipe: Mango Matcha Magic</p>
+    </div>
+    <div class="shake-card">
+      <img src="photos/shake2.png" alt="Yogurt-Blueberry">
+      <div class="shake-overlay">+</div>
+      <p>Muscle Building Shake Recipe: Yogurt-Blueberry</p>
+    </div>
+    <div class="shake-card">
+      <img src="photos/shake3.png" alt="Coffee Latte">
+      <div class="shake-overlay">+</div>
+      <p>Weight Loss Shake Recipe: Almased Iced Coffee Latte</p>
+    </div>
+  </div>
 </section>
 
-  <script> 
-  const hamburger = document.querySelector('.hamburger');
-  const nav = document.querySelector('.nav-links');
+<section class="retailer-logos">
+  <h3>Also Available at</h3>
+  <div class="logos-row">
+    <img src="photos/cvs.png" alt="CVS">
+    <img src="photos/amazon.png" alt="Amazon">
+    <img src="photos/vitacost.png" alt="Vitacost">
+    <img src="photos/walgreens.png" alt="Walgreens">
+    <img src="photos/instacart.png" alt="Instacart">
+    <img src="photos/swanson.png" alt="Swanson">
+  </div>
 
-  hamburger.addEventListener('click', () => {
-    nav.classList.toggle('open');
-  });
+  <section class="awards-section">
+  <img src="photos/awards.png" alt="Awards and Recognitions">
+</section>
 
-  const tabs = document.querySelectorAll('.tab');
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-    });
-  });
+</section>
 
-  // Hide/show hamburger icon on scrolling inside nav (mobile)
-  let lastScrollTop = 0;
-  nav.addEventListener('scroll', () => {
-    const currentScroll = nav.scrollTop;
-    if (currentScroll > lastScrollTop) {
-      hamburger.style.opacity = "0";
-      hamburger.style.pointerEvents = "none";
-    } else {
-      hamburger.style.opacity = "1";
-      hamburger.style.pointerEvents = "auto";
-    }
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-  });
-
-  const heroBanner = document.querySelector('.heroBanner');
-  const bars = document.querySelectorAll('.bar');
-
-  bars.forEach(bar => {
-    bar.addEventListener('click', () => {
-      bars.forEach(b => b.classList.remove('active'));
-      bar.classList.add('active');
-
-      
-      const slideNumber = bar.dataset.slide;
-      heroBanner.className = `heroBanner hero-slide-${slideNumber}`;
-    });
-  });
-
-  // Auto-rotate hero banner every 5 seconds
-  let current = 0;
-  setInterval(() => {
-    current = (current + 1) % bars.length;
-    bars[current].click();
-  }, 5000);
-
-  // Testimonial Carousel
-  const testimonialQuote = document.querySelector('.testimonial-quote .quote');
-  const testimonialAuthor = document.querySelector('.testimonial-quote .author');
-  const testimonialImage = document.querySelector('.testimonial-image img');
-
-  const testimonials = [
-    {
-      quote: "The energy I started to have was unbelievable.",
-      author: "— Stephanie S.",
-      image: "photos/author1.png"
-    },
-    {
-      quote: "Almased changed my life completely!",
-      author: "— Michael B.",
-      image: "photos/author2.png"
-    }
-  ];
-
-  let testimonialIndex = 0;
-
-  function updateTestimonial(index) {
-    testimonialQuote.textContent = `“${testimonials[index].quote}”`;
-    testimonialAuthor.textContent = testimonials[index].author;
-    testimonialImage.src = testimonials[index].image;
-  }
-
-  document.querySelector('.testimonial-arrows .arrow-btn:first-child').addEventListener('click', () => {
-    testimonialIndex = (testimonialIndex - 1 + testimonials.length) % testimonials.length;
-    updateTestimonial(testimonialIndex);
-  });
-
-  document.querySelector('.testimonial-arrows .arrow-btn:last-child').addEventListener('click', () => {
-    testimonialIndex = (testimonialIndex + 1) % testimonials.length;
-    updateTestimonial(testimonialIndex);
-  });
-
-  updateTestimonial(testimonialIndex);
-
-  // Benefit bars (clickable carousel)
-  const benefitbars = document.querySelectorAll('.benefit-bars .bar');
-  const slider = document.getElementById('benefits-slider');
-  const cardWidth = 400;
-  let currentIndex = 0;
-
-  function scrollSlider(index) {
-    slider.style.transform = `translateX(-${index * cardWidth}px)`;
-    benefitbars.forEach(bar => bar.classList.remove('active'));
-    benefitbars[index].classList.add('active');
-  }
-
-  // Arrow buttons for benefit cards
-  function slideBy(direction) {
-    currentIndex += direction;
-    if (currentIndex < 0) currentIndex = 0;
-    if (currentIndex >= benefitbars.length) currentIndex = benefitbars.length - 1;
-    scrollSlider(currentIndex);
-  }
-
-  benefitbars.forEach((bar, index) => {
-    bar.addEventListener('click', () => {
-      currentIndex = index;
-      scrollSlider(currentIndex);
-    });
-  });
-
-document.querySelectorAll('.arrow-outline')[0].addEventListener('click', () => slideBy(-1));
-document.querySelectorAll('.arrow-outline')[1].addEventListener('click', () => slideBy(1));
-
-
-  scrollSlider(0);
-
-
-let quoteIndex = 0;
-
-const quoteText = document.getElementById('quote-text');
-const doctorImg = document.getElementById('quote-doctor');
-const doctorLeft = document.getElementById('doctor-left');
-const doctorRight = document.getElementById('doctor-right');
-const signature = document.getElementById('quote-signature');
-
-const quotes = [
-  {
-    text: `"If you are on GLP-1s, it's important to supplement with Almased so you maintain muscle while still both losing weight and losing fat."`,
-    doctorImg: "photos/doctor.png",
-    signatureImg: "photos/signature.png",
-    left: "Dr Eric J Rosenbaum",
-    right: "Dr Aloys Berg"
-  },
-  {
-    text: `"If you are on GLP-1s, it's important to supplement with Almased so you maintain muscle while still both losing weight and losing fat."`,
-    doctorImg: "photos/doctor.png",
-    signatureImg: "photos/signature.png",
-    left: "Dr Aloys Berg",
-    right: "Dr Eric J Rosenbaum"
-  }
-];
-
-function changeQuote(direction) {
-  quoteIndex = (quoteIndex + direction + quotes.length) % quotes.length;
-  const quote = quotes[quoteIndex];
-
-  quoteText.textContent = quote.text;
-  doctorImg.src = quote.doctorImg;
-  signature.src = quote.signatureImg;
-  doctorLeft.textContent = quote.left;
-  doctorRight.textContent = quote.right;
-
- if (quote.left.includes("Eric")) {
-  doctorLeft.classList.add("active-author");
-  doctorRight.classList.remove("active-author");
-} else {
-  doctorLeft.classList.remove("active-author");
-  doctorRight.classList.add("active-author");
-}
-}
-
-changeQuote(0);
-
-
-</script>
-
-
+<script src="script.js"></script>
 </body>
 </html>
