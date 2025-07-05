@@ -84,11 +84,11 @@ document.querySelector('.testimonial-arrows .arrow-btn:last-child').addEventList
 
 updateTestimonial(testimonialIndex);
 
-// Benefit bars carousel
-const benefitbars = document.querySelectorAll('.benefit-bars .bar');
+// Benefit Bars carousel
+const benefitBars = document.querySelectorAll('.benefit-Bars .Bar');
 const slider = document.getElementById('benefits-slider');
 const cardWidth = 400;
-const totalCards = benefitbars.length;
+const totalCards = benefitBars.length;
 let currentIndex = 0;
 
 function scrollSlider(index) {
@@ -101,16 +101,16 @@ function scrollSlider(index) {
   }
 
   slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-  benefitbars.forEach(bar => bar.classList.remove('active'));
-  benefitbars[currentIndex].classList.add('active');
+  benefitBars.forEach(Bar => Bar.classList.remove('active'));
+  benefitBars[currentIndex].classList.add('active');
 }
 
 function slideBy(direction) {
   scrollSlider(currentIndex + direction);
 }
 
-benefitbars.forEach((bar, index) => {
-  bar.addEventListener('click', () => {
+benefitBars.forEach((Bar, index) => {
+  Bar.addEventListener('click', () => {
     scrollSlider(index);
   });
 });

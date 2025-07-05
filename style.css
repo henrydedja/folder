@@ -284,6 +284,8 @@ body {
     height: 3px;
   }
 }
+
+
 .tabs {
   display: flex;
   flex-wrap: wrap;
@@ -312,6 +314,13 @@ body {
   color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+.tab-plus i {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  border-radius: 50%;
+}
 .tab .plus {
   font-size: 22px;
  
@@ -326,39 +335,18 @@ body {
   justify-content: space-between;
   padding: 40px 60px;
   margin: 40px auto;
-  max-width: 1200px;
+  max-width: 900px;
+  max-height: 500px;
   gap: 40px;
   flex-wrap: wrap;
 }
 
-.shop-button {
-  background-color: #55AB25;
-  color: white;
-  text-decoration: none;
-  padding: 12px 30px;
-  border-radius: 30px;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
+
 
 .shop-button:hover {
   background-color: #3b8a1c;
 }
 
-.welcome-pack {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  background-color: #F1E8E6;
-  padding: 20px 40px;
-  border-radius: 20px;
-  margin: 40px auto;
-  max-width: 800px;
-  height: 500px;
-  overflow: hidden;
-  gap: 20px;
-}
 
 .welcome-text {
   max-width: 50%;
@@ -369,7 +357,7 @@ body {
   color: #238014;
   font-size: 60px;
   font-weight: 300;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   line-height: 100%;
   letter-spacing: 0%;
 }
@@ -415,29 +403,30 @@ body {
 
 .shaker {
   position: absolute;
-  width: 140px;
+  width: 100px;
   height: auto;
-  left: 90px;
+  left: -2px;
   top: 0;
   z-index: 2;
 }
 
 .can1 {
   position: absolute;
-  width: 140px;
+  width: 104px;
   height: auto;
-  left: 180px;
-  top: 40px;
+  left: 63px;
+  top: 14px;
   z-index: 3;
 }
 
 .can2 {
   position: absolute;
-  width: 140px;
+  width: 99px;
   height: auto;
-  left: 260px;
-  top: 20px;
+  left: 126px;
+  top: 3px;
   z-index: 1;
+
 }
 
 /* Responsive */
@@ -827,14 +816,14 @@ body {
 
 
 
-.benefit-bars {
+.benefit-Bars {
   display: flex;
   justify-content: center;
   gap: 30px;
   margin-top: 20px;
 }
 
-.bar {
+.Bar {
   width: 180px;
   height: 3px;
   background-color: #bdbdbd;
@@ -842,9 +831,10 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.bar.active {
+.Bar.active {
   background-color: white;
 }
+
 /* Responsive */
 @media (max-width: 768px) {
   .health-title {
@@ -888,12 +878,12 @@ body {
     font-size: 13px;
   }
 
-  .benefit-bars {
+  .benefit-Bars {
     flex-wrap: wrap;
     gap: 15px;
   }
 
-  .bar {
+  .Bar {
     width: 100px;
   }
 
@@ -1256,7 +1246,6 @@ body {
 
 .retailer-logos {
   text-align: center;
-  padding: 50px 20px;
 }
 
 .retailer-logos h3 {
@@ -1271,7 +1260,7 @@ body {
 .logos-row {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  gap: 40px 60px;
+  gap: 40px 120px;
   justify-items: center;
   align-items: center;
   max-width: 700px;
