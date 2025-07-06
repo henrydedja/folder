@@ -295,38 +295,70 @@ body {
 }
 
 .tab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   border: 1px solid #ccc;
   padding: 12px 20px;
   border-radius: 10px;
   font-size: 16px;
   font-weight: 500;
-  width: 180px;
-  height: 40px;
+  width: 190px;
+  height: 70px; 
   background-color: white;
   color: #4CAF50;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
+
+.tab .plus {
+  font-size: 22px;
+  color: rgb(104, 100, 100); 
+  font-weight: 100;
+  line-height: 1;
+}
+
+.tab .text {
+  font-family: 'Jost';
+  margin-top: 8px;
+  font-size: 16px;
+  color: #4CAF50;
+  font-weight: 300;
+  line-height: 100%;
+}
 
 .tab:hover {
   background-color: #55AB25;
-  color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+.tab:hover .plus,
+.tab:hover .text {
+  color: white;
+}
 
-.tab-plus i {
-  width: 32px;
-  height: 32px;
-  position: relative;
-  border-radius: 50%;
+.tabs .tab:last-child {
+  background-color: #f4f4f4; 
+  color: #228200;            
+  border-color: #228200;     
 }
-.tab .plus {
-  font-size: 22px;
- 
-  color: rgb(104, 100, 100); 
-  font-weight: 100;
+
+.tabs .tab:last-child .plus {
+  color: #228200;            
 }
+
+.tabs .tab:last-child:hover {
+  background-color: #228200; 
+  color: white;
+}
+
+.tabs .tab:last-child:hover .plus {
+  color: white;
+}
+
+
 .welcome-part {
   background-color: #f3ede7;
   border-radius: 16px;
@@ -722,8 +754,8 @@ body {
 }
 
 .benefit-card {
-  width: 400px;
-  height: 500px;
+  width: 385px;
+  height: 450px;
   flex: 0 0 auto;
   background: #55AB25;
   border-radius: 10px;
