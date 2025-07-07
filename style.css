@@ -93,7 +93,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 350px;
     width: 250px;
     background-color: white;
     flex-direction: column;
@@ -105,7 +105,7 @@ body {
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
     border-right: 1px solid #eee;
-    overflow-y: auto;
+    overflow-y:auto;
   }
 
   .nav-links.open {
