@@ -846,8 +846,6 @@ body {
   color: white;
 }
 
-
-
 .benefit-Bars {
   display: flex;
   justify-content: center;
@@ -878,16 +876,23 @@ body {
   }
 
   .benefits-slider {
-    flex-direction: column;
-    align-items: center;
+    width: 255px;
+    height: 350px;
+    padding-left: 10px;
+    flex-direction: row; 
+    align-items:flex-start;
   }
 
   .benefit-card {
-    width: 90%;
-    height: auto;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   .benefit-img {
+    width: auto;
     height: auto;
   }
 
@@ -898,8 +903,12 @@ body {
   }
 
   .benefit-text {
-    height: auto;
-    padding: 16px;
+  line-height: 100%;
+  max-height: 100px; 
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   }
 
   .benefit-text h3 {
@@ -913,10 +922,11 @@ body {
   .benefit-Bars {
     flex-wrap: wrap;
     gap: 15px;
+    justify-content: center;
   }
 
   .Bar {
-    width: 100px;
+    width: 50px;
   }
 
   .benefit-nav {
