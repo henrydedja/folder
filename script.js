@@ -13,7 +13,7 @@ tabs.forEach(tab => {
   });
 });
 
-// Hide/show hamburger icon on scrolling inside nav (mobile)
+// Hide/show hamburger icon on scrolling inside nav 
 let lastScrollTop = 0;
 nav.addEventListener('scroll', () => {
   const currentScroll = nav.scrollTop;

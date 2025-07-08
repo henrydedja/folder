@@ -73,9 +73,9 @@ body {
 }
 
 
-/*  Responsive nav links */
+/* Responsive */
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .hamburger {
     display: block;
     z-index: 1001;
@@ -229,7 +229,7 @@ body {
 .bar {
   width: 30px;
   height: 2px;
-  margin-top: 60px;
+  margin-bottom: 20px;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 2px;
   transition: background-color 0.3s;
@@ -239,7 +239,7 @@ body {
   background-color: white;
 }
 
-/*  Responsive hero banner */
+/* Responsive */
 
 @media (max-width: 768px) {
   .heroBanner-aligner {
@@ -340,13 +340,16 @@ body {
 }
 
 .tabs .tab:last-child {
-  background-color: #f4f4f4; 
-  color: #228200;            
-  border-color: #228200;     
+  background-color: #f4f4f4;           
+  border-color: #5e5b5b;     
 }
 
 .tabs .tab:last-child .plus {
-  color: #228200;            
+  color: #5e5b5b;            
+}
+
+.tabs .tab:last-child .text {
+  color: #5e5b5b;           
 }
 
 .tabs .tab:last-child:hover {
