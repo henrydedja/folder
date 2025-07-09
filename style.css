@@ -75,7 +75,7 @@ body {
 
 /* Responsive */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hamburger {
     display: block;
     z-index: 1001;
@@ -569,9 +569,49 @@ body {
     .shop-button {
     position: absolute;
     top: 1490px;
-    left: 160px;
+    left: 145px;
     font-size: 14px;
     padding: 6px 19px;
+  }
+}
+
+
+
+@media (width: 375px) {
+    .shop-button{ 
+    position: absolute;
+    top: 1666px;
+    left: 133px;
+    font-size: 14px;
+    padding: 6px 19px;
+  }
+}
+
+@media (max-width: 360px) {
+    .shop-button{ 
+    position: absolute;
+    top: 1707px;
+    left: 127px;
+    font-size: 14px;
+    padding: 6px 19px;
+  }
+}
+
+
+@media (width: 912px) {
+    .shop-button{ 
+    position: absolute;
+    top: 1328px;
+    left: 355px;
+    font-size: 14px;
+    padding: 6px 19px;
+  }
+  .image-group {
+    position: absolute;
+    top: -471px;
+    left: 483px;
+    transform: scale(1);
+    margin-top: 30px;
   }
 }
 
