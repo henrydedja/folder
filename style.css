@@ -1483,7 +1483,7 @@ body {
 }
 
 .newsletter-form input[type="email"] {
-  padding: 12px 20px;
+  padding: 6px 80px;
   border: 2px solid #4D9B2F;
   border-radius: 999px;
   font-size: 20px;
