@@ -470,7 +470,7 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 825px) {
   .welcome-pack {
     flex-direction: column;
     align-items: center;
@@ -1451,7 +1451,7 @@ body {
 }
 /* Responsive */
 
-@media (max-width: 768px) {
+@media (max-width: 825px) {
   .shake-title {
     font-size: 28px;
     line-height: 1.3;
