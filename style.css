@@ -572,7 +572,7 @@ body {
     .shop-button {
     position: absolute;
     top: 1490px;
-    left: 145px;
+    left: 150px;
     font-size: 14px;
     padding: 6px 19px;
   }
@@ -590,7 +590,7 @@ body {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 365px) {
     .shop-button{ 
     position: absolute;
     top: 1707px;
@@ -601,7 +601,7 @@ body {
 }
 
 
-@media (width: 912px) {
+@media (width: 914px) {
     .shop-button{ 
     position: absolute;
     top: 1328px;
