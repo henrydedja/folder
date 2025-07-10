@@ -580,7 +580,7 @@ body {
 
 
 
-@media (width: 375px) {
+@media (max-width: 380px) {
     .shop-button{ 
     position: absolute;
     top: 1666px;
