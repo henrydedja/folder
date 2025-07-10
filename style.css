@@ -353,11 +353,14 @@ body {
 }
 
 .tabs .tab:last-child:hover {
-  background-color: #228200; 
-  color: white;
+  background-color: #55AB25; 
 }
 
 .tabs .tab:last-child:hover .plus {
+  color: white;
+}
+
+.tabs .tab:last-child:hover .text {
   color: white;
 }
 
