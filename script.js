@@ -50,17 +50,22 @@ setInterval(() => {
 const testimonialQuote = document.querySelector('.testimonial-quote .quote');
 const testimonialAuthor = document.querySelector('.testimonial-quote .author');
 const testimonialImage = document.querySelector('.testimonial-image img');
+const testimonialButton = document.querySelector('.story-btn');
 
 const testimonials = [
   {
     quote: "The energy I started to have was unbelievable.",
     author: "— Stephanie S.",
-    image: "photos/author1.png"
+    image: "photos/author1.png",
+    buttonText: "LEARN STEPHANIE'S STORY",
+    buttonLink: "#stephanie-story"
   },
   {
     quote: "Almased changed my whole life completely!",
     author: "— Michael B.",
-    image: "photos/author2.png"
+    image: "photos/author2.png",
+    buttonText: "LEARN MICHAEL'S STORY",
+    buttonLink: "#michael-story"
   }
 ];
 
@@ -70,6 +75,8 @@ function updateTestimonial(index) {
   testimonialQuote.textContent = `“${testimonials[index].quote}”`;
   testimonialAuthor.textContent = testimonials[index].author;
   testimonialImage.src = testimonials[index].image;
+  testimonialButton.textContent = testimonials[index].buttonText;
+  testimonialButton.href = testimonials[index].buttonLink;
 }
 
 document.querySelector('.testimonial-arrows .arrow-btn:first-child').addEventListener('click', () => {
