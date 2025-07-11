@@ -898,6 +898,7 @@ body {
 
 
 .benefit-text {
+  text-align: left;
   padding: 20px;
   height: 150px; 
   box-sizing: border-box;
@@ -1353,6 +1354,7 @@ body {
 }
 
 .shake-card {
+  text-align: left;
   font-family: 'Jost';
   background-color: #55AB26;
   font-size: 28px;
